@@ -2,14 +2,25 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8">
+  <!-- Gör så att sidan funkar bra på mobil och dator -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Titeln som visas i fliken i webbläsaren -->
   <title>Mitt CV</title>
+
+  <!-- Länkar till min CSS-fil där jag har all design -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Här lägger jag till en ikon (favicon) som visas i webbläsarens flik -->
   <link rel="icon" href="bilder/Skärmbild 2025-01-26 235441.png">
 </head>
 <body>
+  <!-- Det här är navigationsfältet (menyn) längst upp på sidan -->
   <nav>
+    <!-- Min logga eller namn som syns till vänster -->
     <div class="logo">Yonis CV</div>
+
+    <!-- Hamburger-meny för mobilen (de tre strecken) -->
     <div id="hamburger" class="ham-menu">
       <span></span>
       <span></span>
@@ -17,8 +28,10 @@
     </div>
   </nav>
 
+  <!-- Detta är sidomenyn som kommer fram när man klickar på hamburgaren -->
   <div id="menu" class="off-screen-menu">
     <ul>
+      <!-- Här är alla länkar i menyn -->
       <li><a href="index.html">Hem</a></li>
       <li><a href="om-mig.html">Om Mig</a></li>
       <li><a href="cv.html">Mitt CV</a></li>
@@ -27,10 +40,13 @@
     </ul>
   </div>
 
+  <!-- Här är huvudinnehållet på sidan, alltså mitt CV -->
   <div class="container">
     <div class="content">
+      <!-- Rubriken som visas på sidan -->
       <h1>Mitt CV</h1>
       
+      <!-- Här är listan med mina erfarenheter -->
       <ul class="cv-list">
         <li class="cv-item">
           <h3>Göteborgs Kommun, Funktionsstöd</h3>
@@ -48,6 +64,7 @@
     </div>
   </div>
 
+  <!-- Här länkar jag till mitt JavaScript som t.ex. styr hamburgarmenyn -->
   <script src="script.js"></script>
 </body>
 </html>
