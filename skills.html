@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yonis CV | Skills</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Use Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="nav-wrapper">
+        <nav>
+            <a href="index.html" class="logo">Yonis CV</a>
+            <div id="hamburger" class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Off-screen Menu -->
+    <div id="menu" class="off-screen-menu">
+        <ul>
+            <li class="menu-item"><a href="index.html" class="menu-link"><i class="fas fa-home"></i> Home</a></li>
+            <li class="menu-item"><a href="about.html" class="menu-link"><i class="fas fa-user"></i> About Me</a></li>
+            <li class="menu-item"><a href="cv.html" class="menu-link"><i class="fas fa-file-alt"></i> My CV</a></li>
+            <li class="menu-item"><a href="skills.html" class="menu-link"><i class="fas fa-code"></i> My Skills</a></li>
+            <li class="menu-item"><a href="school.html" class="menu-link"><i class="fas fa-school"></i> My School</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <section class="content">
+                <h1 class="page-title">My Skills</h1>
+                <p>Here are my technical skills and proficiency levels:</p>
+                
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <div class="skill-name"><i class="fab fa-python"></i> Python Förmåga</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="75%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name"><i class="fab fa-html5"></i> HTML Förmåga</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="60%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name"><i class="fas fa-code"></i> C++ Förmåga</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="50%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name"><i class="fab fa-java"></i> Java Förmåga</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="65%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Alternative visualization -->
+                <div style="margin-top: 40px;">
+                    <object data="assets/skills.svg" type="image/svg+xml" width="300" height="300">
+                        Your browser does not support SVG
+                    </object>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

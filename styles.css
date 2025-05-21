@@ -1,0 +1,418 @@
+/* Grundläggande stilar och återställning */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: crimson;
+}
+
+/* Layout och behållare */
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+  margin: 70px auto 20px;
+  padding: 20px;
+}
+
+.content {
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: crimson;
+  transition: width 0.3s ease;
+}
+
+h1:hover::after {
+  width: 120px;
+}
+
+/* Navigering */
+nav {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(34, 37, 49);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Hamburgermenyn */
+.ham-menu {
+  height: 30px;
+  width: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.ham-menu span {
+  height: 4px;
+  width: 100%;
+  background-color: crimson;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.ham-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(9px, 9px);
+}
+
+.ham-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(9px, -9px);
+}
+
+/* Off-screen meny */
+.off-screen-menu {
+  background-color: transparent;
+  height: 100vh;
+  width: 100%;
+  max-width: 350px;
+  position: fixed;
+  top: 0;
+  right: -350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s ease, background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.off-screen-menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.off-screen-menu li {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition-delay: calc(var(--item-index, 0) * 0.1s);
+}
+
+.off-screen-menu.active li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.off-screen-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.off-screen-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: crimson;
+  transition: width 0.3s ease;
+}
+
+.off-screen-menu a:hover {
+  color: crimson;
+}
+
+.off-screen-menu a:hover::after {
+  width: 100%;
+}
+
+.off-screen-menu.active {
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Hem-sida */
+.home-logo {
+  margin: 20px 0;
+}
+
+.home-logo img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.home-logo img:hover {
+  transform: scale(1.05);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.cta-button {
+  padding: 12px 24px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e01541;
+  transform: translateY(-3px);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  border: 2px solid crimson;
+}
+
+.cta-button.secondary:hover {
+  background-color: rgba(220, 20, 60, 0.1);
+}
+
+/* Profilsektion */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid crimson;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(220, 20, 60, 0.3);
+}
+
+.bio {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* CV-lista */
+.cv-list {
+  padding: 0;
+  margin: 20px auto;
+  max-width: 600px;
+  list-style: none;
+}
+
+.cv-item {
+  background-color: rgba(34, 37, 49, 0.5);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
+.cv-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: crimson;
+}
+
+.cv-item:hover {
+  transform: translateX(10px);
+  background-color: rgba(34, 37, 49, 0.8);
+}
+
+.cv-item h3 {
+  margin-bottom: 10px;
+}
+
+/* Skolsektion */
+.school-info {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.school-logo {
+  max-width: 250px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.school-logo:hover {
+  transform: scale(1.05);
+}
+
+.school-info p {
+  max-width: 600px;
+  margin: 20px auto;
+  line-height: 1.8;
+}
+
+/* Färdighetssektion */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skill-item {
+  background-color: rgba(34, 37, 49, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.skill-bar {
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, crimson, #ff6b81);
+  border-radius: 10px;
+  transition: width 1s ease;
+  width: 0;
+}
+
+/* Medieförfrågningar */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .school-logo {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .ham-menu {
+    width: 35px;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .cv-item {
+    padding: 15px;
+  }
+
+  .skill-name {
+    font-size: 1rem;
+  }
+}
