@@ -4,12 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Min Skola</title>
+
+  <!-- Länk till extern CSS-fil för att styla sidan -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Lägger till en ikon (favicon) i fliken i webbläsaren -->
   <link rel="icon" href="bilder/Skärmbild 2025-01-26 235441.png">
 </head>
 <body>
+
+  <!-- Navigationsmenyn högst upp på sidan -->
   <nav>
+    <!-- Logotyp/text som representerar webbplatsens namn -->
     <div class="logo">Yonis CV</div>
+
+    <!-- "Hamburgarmeny" - används på mobil/små skärmar för att visa menyn -->
     <div id="hamburger" class="ham-menu">
       <span></span>
       <span></span>
@@ -17,8 +26,10 @@
     </div>
   </nav>
 
+  <!-- Menyn som visas när man klickar på hamburgarikonen -->
   <div id="menu" class="off-screen-menu">
     <ul>
+      <!-- Menyval som leder till olika sidor -->
       <li><a href="index.html">Hem</a></li>
       <li><a href="om-mig.html">Om Mig</a></li>
       <li><a href="cv.html">Mitt CV</a></li>
@@ -27,13 +38,18 @@
     </ul>
   </div>
 
+  <!-- Huvudinnehållet på sidan -->
   <div class="container">
     <div class="content">
+      <!-- Rubrik för sidan -->
       <h1>Min Skola</h1>
       
+      <!-- Avsnitt med information om skolan -->
       <div class="school-info">
+        <!-- Logotyp för skolan -->
         <img src="bilder/nti-logo.png" alt="NTI Logo" class="school-logo">
         
+        <!-- Text om min skolgång och miljön på NTI -->
         <p>
           Välkommen till min skola! Jag studerar på NTI Gymnasiet, där jag breddar mina kunskaper och färdigheter inom olika ämnen. 
           Skolan erbjuder en stödjande miljö för personlig utveckling, med fokus på teknik och innovation.
@@ -46,6 +62,7 @@
     </div>
   </div>
 
+  <!-- Länk till JavaScript-fil som hanterar till exempel menyfunktioner -->
   <script src="script.js"></script>
 </body>
 </html>
