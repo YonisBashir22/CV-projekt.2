@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yonis CV | Skills</title>
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Use Font Awesome for icons -->
+    <!-- Använder Font Awesome för att visa ikoner bredvid texten -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigationen högst upp på sidan -->
     <div class="nav-wrapper">
         <nav>
+            <!-- Logotyp som länkar tillbaka till startsidan -->
             <a href="index.html" class="logo">Yonis CV</a>
+            <!-- "Hamburgarmeny"-knapp för att öppna/stänga menyn på mindre skärmar -->
             <div id="hamburger" class="ham-menu">
                 <span></span>
                 <span></span>
@@ -21,9 +23,10 @@
         </nav>
     </div>
 
-    <!-- Off-screen Menu -->
+    <!-- Menyn som glider in från sidan (off-screen menu) -->
     <div id="menu" class="off-screen-menu">
         <ul>
+            <!-- Menyval med ikoner från Font Awesome och länkar till olika sidor -->
             <li class="menu-item"><a href="index.html" class="menu-link"><i class="fas fa-home"></i> Home</a></li>
             <li class="menu-item"><a href="about.html" class="menu-link"><i class="fas fa-user"></i> About Me</a></li>
             <li class="menu-item"><a href="cv.html" class="menu-link"><i class="fas fa-file-alt"></i> My CV</a></li>
@@ -32,17 +35,24 @@
         </ul>
     </div>
 
-    <!-- Main Content -->
+    <!-- Huvudinnehållet på sidan -->
     <main>
         <div class="container">
             <section class="content">
+                <!-- Sidans titel -->
                 <h1 class="page-title">My Skills</h1>
+                <!-- Kort introduktionstext -->
                 <p>Here are my technical skills and proficiency levels:</p>
                 
+                <!-- Behållare för färdighetslistan -->
                 <div class="skills-container">
+                    <!-- Enskild färdighet -->
                     <div class="skill-item">
+                        <!-- Namn på färdigheten + ikon för Python -->
                         <div class="skill-name"><i class="fab fa-python"></i> Python Förmåga</div>
+                        <!-- Bakgrund för färdighetsstapeln -->
                         <div class="skill-bar">
+                            <!-- Själva färdighetsnivån, bredden styrs via CSS och JS utifrån data-skill -->
                             <div class="skill-progress" data-skill="75%"></div>
                         </div>
                     </div>
@@ -69,7 +79,7 @@
                     </div>
                 </div>
                 
-                <!-- Alternative visualization -->
+                <!-- Alternativ visuell presentation av färdigheter, inbäddad SVG-bild -->
                 <div style="margin-top: 40px;">
                     <object data="assets/skills.svg" type="image/svg+xml" width="300" height="300">
                         Your browser does not support SVG
@@ -79,6 +89,7 @@
         </div>
     </main>
 
+    <!-- JavaScript-fil som innehåller interaktiviteten (t.ex. menyn och animationer) -->
     <script src="js/main.js"></script>
 </body>
 </html>
