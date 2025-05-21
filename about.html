@@ -2,17 +2,26 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
+    <!-- Den här raden gör så att sidan funkar bra på mobil och surfplatta -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Titel som visas i fliken i webbläsaren -->
     <title>Yonis CV | About Me</title>
+
+    <!-- Jag länkar till min egen CSS-fil där jag har skrivit all min design -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Use Font Awesome for icons -->
+
+    <!-- Här använder jag Font Awesome för att kunna lägga in ikoner -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Det här är navigationen högst upp på sidan -->
     <div class="nav-wrapper">
         <nav>
+            <!-- Här är min logotyp som också är en länk till startsidan -->
             <a href="index.html" class="logo">Yonis CV</a>
+            
+            <!-- Hamburger-menyn som visas på mobil (de tre strecken) -->
             <div id="hamburger" class="ham-menu">
                 <span></span>
                 <span></span>
@@ -21,9 +30,10 @@
         </nav>
     </div>
 
-    <!-- Off-screen Menu -->
+    <!-- Det här är min meny som kommer ut från sidan när man klickar på hamburgaren -->
     <div id="menu" class="off-screen-menu">
         <ul>
+            <!-- Här är alla länkarna i min meny -->
             <li class="menu-item"><a href="index.html" class="menu-link"><i class="fas fa-home"></i> Home</a></li>
             <li class="menu-item"><a href="about.html" class="menu-link"><i class="fas fa-user"></i> About Me</a></li>
             <li class="menu-item"><a href="cv.html" class="menu-link"><i class="fas fa-file-alt"></i> My CV</a></li>
@@ -32,26 +42,30 @@
         </ul>
     </div>
 
-    <!-- Main Content -->
+    <!-- Här börjar huvudinnehållet på sidan -->
     <main>
         <div class="container">
             <section class="content">
+                <!-- Rubriken på sidan -->
                 <h1 class="page-title">About Me</h1>
                 
+                <!-- Här visar jag min profilbild och text om mig själv -->
                 <div class="profile-section">
+                    <!-- Min profilbild -->
                     <img src="attached_assets/Skärmbild 2025-01-22 092725.png" alt="Yonis profile picture" class="profile-img">
                     
+                    <!-- Här skriver jag lite om mig själv -->
                     <div class="bio">
                         <p>
                             Jag heter Yonis Hussein Bashir och är född 2007. Jag har ett stort intresse för sport och tv-spel, 
                             och jag gillar att vara engagerad i det jag gör.
                         </p>
                         <p>
-                            Min passion för spel går bortom att bara spela dem – jag är intresserad av att skapa spel själv i framtiden.
-                            Jag är certifierad i Python och har också grundläggande kunskaper i CSS, HTML, Java, JavaScript och C++.
+                            Jag gillar inte bara att spela spel – jag vill också lära mig hur man gör dem. Jag är certifierad i Python och 
+                            har grunderna i CSS, HTML, Java, JavaScript och C++.
                         </p>
                         <p>
-                            Jag ser fram emot att utveckla mina färdigheter och kanske en dag jobba med att designa och utveckla spel.
+                            Mitt mål är att utvecklas mer och kanske jobba med spelutveckling i framtiden.
                         </p>
                     </div>
                 </div>
@@ -59,6 +73,7 @@
         </div>
     </main>
 
+    <!-- Här länkar jag till mitt JavaScript som t.ex. styr menyknappen -->
     <script src="js/main.js"></script>
 </body>
 </html>
