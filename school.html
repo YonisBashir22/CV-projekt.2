@@ -1,50 +1,51 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="sv"> <!-- Sidan är på svenska -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yonis CV | My School</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Use Font Awesome for icons -->
+    <meta charset="UTF-8"> <!-- Så att svenska tecken funkar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Gör sidan mobilvänlig -->
+    <title>Yonis CV | My School</title> <!-- Titel som syns i fliken -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Kopplar till min CSS-fil för design -->
+    <!-- Använder Font Awesome för ikoner -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigationen högst upp -->
     <div class="nav-wrapper">
         <nav>
-            <a href="index.html" class="logo">Yonis CV</a>
-            <div id="hamburger" class="ham-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a href="index.html" class="logo">Yonis CV</a> <!-- Logotypen som länkar till startsidan -->
+            <div id="hamburger" class="ham-menu"> <!-- Hamburgermeny för mobil -->
+                <span></span> <!-- Streck 1 -->
+                <span></span> <!-- Streck 2 -->
+                <span></span> <!-- Streck 3 -->
             </div>
         </nav>
     </div>
 
-    <!-- Off-screen Menu -->
+    <!-- Menyn som är utanför skärmen och visas när man klickar på hamburgaren -->
     <div id="menu" class="off-screen-menu">
         <ul>
-            <li class="menu-item"><a href="index.html" class="menu-link"><i class="fas fa-home"></i> Home</a></li>
-            <li class="menu-item"><a href="about.html" class="menu-link"><i class="fas fa-user"></i> About Me</a></li>
-            <li class="menu-item"><a href="cv.html" class="menu-link"><i class="fas fa-file-alt"></i> My CV</a></li>
-            <li class="menu-item"><a href="skills.html" class="menu-link"><i class="fas fa-code"></i> My Skills</a></li>
-            <li class="menu-item"><a href="school.html" class="menu-link"><i class="fas fa-school"></i> My School</a></li>
+            <li class="menu-item"><a href="index.html" class="menu-link"><i class="fas fa-home"></i> Home</a></li> <!-- Länk till startsidan med ikon -->
+            <li class="menu-item"><a href="about.html" class="menu-link"><i class="fas fa-user"></i> About Me</a></li> <!-- Länk till Om Mig-sidan -->
+            <li class="menu-item"><a href="cv.html" class="menu-link"><i class="fas fa-file-alt"></i> My CV</a></li> <!-- Länk till CV-sidan -->
+            <li class="menu-item"><a href="skills.html" class="menu-link"><i class="fas fa-code"></i> My Skills</a></li> <!-- Länk till färdigheter -->
+            <li class="menu-item"><a href="school.html" class="menu-link"><i class="fas fa-school"></i> My School</a></li> <!-- Länk till skolinfo -->
         </ul>
     </div>
 
-    <!-- Main Content -->
+    <!-- Huvudinnehållet på sidan -->
     <main>
         <div class="container">
             <section class="content">
-                <h1 class="page-title">My School</h1>
-                
+                <h1 class="page-title">My School</h1> <!-- Stor rubrik -->
+
                 <div class="school-info">
-                    <!-- Replace with SVG or a different image -->
+                    <!-- Här är en bild på skolans logga som en SVG -->
                     <svg width="250" height="100" viewBox="0 0 250 100" class="school-logo">
-                        <rect x="10" y="20" width="230" height="60" rx="5" fill="#0066cc"/>
-                        <text x="125" y="60" font-family="Arial" font-size="30" text-anchor="middle" fill="white">NTI Gymnasiet</text>
+                        <rect x="10" y="20" width="230" height="60" rx="5" fill="#0066cc"/> <!-- Blå bakgrund med rundade hörn -->
+                        <text x="125" y="60" font-family="Arial" font-size="30" text-anchor="middle" fill="white">NTI Gymnasiet</text> <!-- Text i mitten -->
                     </svg>
-                    
+
+                    <!-- Text om min skola -->
                     <p>
                         Welcome to my school! I study at NTI Gymnasiet, where I am expanding my knowledge and skills in various subjects. 
                         The school provides a supportive environment for growth, with a focus on technology and innovation. 
@@ -58,6 +59,7 @@
         </div>
     </main>
 
+    <!-- Kopplar till min JavaScript-fil som t.ex. styr hamburgermenyn -->
     <script src="js/main.js"></script>
 </body>
 </html>
