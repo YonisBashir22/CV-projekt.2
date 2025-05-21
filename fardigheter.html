@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="sv"> <!-- Sidan är på svenska -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mina Färdigheter</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="bilder/Skärmbild 2025-01-26 235441.png">
+  <meta charset="UTF-8"> <!-- Gör så att svenska tecken visas rätt -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Gör sidan responsiv på mobil -->
+  <title>Mina Färdigheter</title> <!-- Titeln som syns i fliken i webbläsaren -->
+  <link rel="stylesheet" href="styles.css"> <!-- Länkar till min design/CSS-fil -->
+  <link rel="icon" href="bilder/Skärmbild 2025-01-26 235441.png"> <!-- Lägger till en liten ikon i fliken -->
 </head>
 <body>
+  <!-- Navigation högst upp på sidan -->
   <nav>
-    <div class="logo">Yonis CV</div>
+    <div class="logo">Yonis CV</div> <!-- Min logga eller namn i menyn -->
+    <!-- Hamburger-meny för mobilvisning -->
     <div id="hamburger" class="ham-menu">
       <span></span>
       <span></span>
@@ -17,6 +19,7 @@
     </div>
   </nav>
 
+  <!-- Sidomeny som dyker upp när man klickar på hamburgermenyn -->
   <div id="menu" class="off-screen-menu">
     <ul>
       <li><a href="index.html">Hem</a></li>
@@ -27,47 +30,52 @@
     </ul>
   </div>
 
+  <!-- Här börjar innehållet på sidan -->
   <div class="container">
     <div class="content">
-      <h1>Mina Färdigheter</h1>
+      <h1>Mina Färdigheter</h1> <!-- Stor rubrik för sidan -->
       <p>Här kan du se min tekniska kompetens inom olika programmeringsspråk:</p>
       
+      <!-- En lista över mina kunskaper som progress bar -->
       <div class="skills-container">
+        <!-- Varje del nedan visar en färdighet -->
         <div class="skill-item">
           <div class="skill-name">Python Förmåga</div>
           <div class="skill-bar">
-            <div class="skill-progress" data-skill="75%"></div>
+            <div class="skill-progress" data-skill="75%"></div> <!-- Visar att jag kan 75% Python -->
           </div>
         </div>
         
         <div class="skill-item">
           <div class="skill-name">HTML Förmåga</div>
           <div class="skill-bar">
-            <div class="skill-progress" data-skill="60%"></div>
+            <div class="skill-progress" data-skill="60%"></div> <!-- Visar 60% kunskap i HTML -->
           </div>
         </div>
         
         <div class="skill-item">
           <div class="skill-name">C++ Förmåga</div>
           <div class="skill-bar">
-            <div class="skill-progress" data-skill="50%"></div>
+            <div class="skill-progress" data-skill="50%"></div> <!-- 50% i C++ -->
           </div>
         </div>
         
         <div class="skill-item">
           <div class="skill-name">Java Förmåga</div>
           <div class="skill-bar">
-            <div class="skill-progress" data-skill="65%"></div>
+            <div class="skill-progress" data-skill="65%"></div> <!-- 65% i Java -->
           </div>
         </div>
       </div>
       
+      <!-- Här visar jag en bild som kanske är ett diagram över färdigheter -->
       <div style="margin-top: 40px;">
         <img src="bilder/Skärmbild 2025-01-24 153809.png" alt="Mina färdigheter diagram" style="max-width: 100%;">
       </div>
     </div>
   </div>
 
+  <!-- Min JavaScript-fil som styr t.ex. hamburgermenyn -->
   <script src="script.js"></script>
 </body>
 </html>
